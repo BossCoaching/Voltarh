@@ -278,7 +278,7 @@ p {
   max-width: 46ch;
   font-size: 1.02rem;
   margin-bottom: 30px;
-  color: var(--text-navy);
+  color: var(--teal-100);
 }
 
 .hero-media {
@@ -671,7 +671,12 @@ p {
   position: relative;
   overflow: hidden;
 }
+.footer-logo img {
+  width: 150px;
+  height: auto;
+  display: block;
 
+}
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
