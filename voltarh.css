@@ -165,8 +165,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 
 .logo {
@@ -213,6 +213,11 @@ p {
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
+.main-nav a.btn {
+  padding: 14px 26px;
+  border-bottom: none;
+  justify-content: center;
+}
 .main-nav a:hover {
   color: var(--teal-600);
 }
@@ -228,7 +233,11 @@ p {
   cursor: pointer;
   padding: 6px;
 }
-
+.nav-logo img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
 .nav-toggle span {
   display: block;
   width: 24px;
@@ -257,6 +266,7 @@ p {
 .hero h1 {
   font-size: clamp(2.1rem, 3.6vw, 3.05rem);
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .hero h1 em {
@@ -268,20 +278,30 @@ p {
   max-width: 46ch;
   font-size: 1.02rem;
   margin-bottom: 30px;
+  color: var(--text-navy);
 }
 
 .hero-media {
-  position: relative;
-  border-radius: 28px 28px 4px 120px;
-  overflow: hidden;
-  aspect-ratio: 4 / 3.2;
-  box-shadow: 0 30px 60px -30px rgba(12, 40, 72, 0.35);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 
 .hero-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(9, 27, 48, 0.82) 0%, rgba(9, 27, 48, 0.55) 42%, rgba(9, 27, 48, 0.08) 68%);
+}
+.hero-copy {
+  position: relative;
+  z-index: 2;
 }
 
 /* About
